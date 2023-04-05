@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+
+body {
+  background: #ffffff;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 300px;
+  padding: 20px 0;
+  background: #009468;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+.sidebar .profile {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.sidebar .profile img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 0%;
+  margin: 0 auto;
+}
+.sidebar .menu {
+  display: block;
+  padding: 13px 0px;
+  color: rgb(241, 237, 237);
+  font-size: 16px;
+  position: relative;
+  line-height: 35px;
+}
+.sidebar .menu .item{
+ position: relative;
+ cursor: pointer;
+}
+.sidebar .menu .item a{
+ color: #fff;
+ font-size: 16px;
+ text-decoration: none;
+ display: block;
+ padding: 5px 30px;
+ line-height: 60px;
+}
+.item a .dropdown{
+ position: absolute;
+ right: 0;
+ margin: 20px;
+ transition: 0.3s ease;
+}
+.item .sub-menu{
+ background: #00804f;
+ display: none;
+}
+.sidebar .menu .item .sub-menu a{
+    padding-left:60px;
+}
+.rotate{
+    transform: rotate(90deg);
+}
+.sidebar .menu .item a:hover,
+.sidebar .menu .item a.active{
+  color: #ffffff;
+  background: #13714f;
+}

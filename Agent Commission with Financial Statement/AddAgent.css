@@ -1,0 +1,87 @@
+/*tables style------------------*/
+.agenttbl{
+    margin-left: 400px;
+    margin-top: 200px;
+    height: 700px;
+    width: 1450px;
+    background-color: #e2e2e2;
+    overflow: auto;
+  }
+  .agenttbl.agentdata{
+    border-collapse:collapse;
+    position: relative;
+    top: 120px;
+    left:120px;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    table-layout: fixed;
+    min-width: 1000px;
+  }
+  table{
+    width: 100%;
+    table-layout: fixed;
+    min-width: 1000px;
+    border-collapse:collapse;
+  }
+  th, td {
+    padding-top: 10px;
+    text-align: center;
+    padding: 8px;
+    border-bottom: 1px solid #d4d4d4;
+    padding: 15px 25px;
+    word-break: break-all;
+    color:#1d1d1d;
+  
+  }
+  
+  th {
+    position: sticky;
+    background-color: #363636;
+    top:0;
+    color: #ffffff;
+    font-size: 20px;
+  }
+  td .actionbtnedit{
+    width: 80px;
+    height: 40px;
+    border-radius: 25px;
+    border:none;
+    font-size: 20px;
+    background-color: #00b460;
+    color: #ffffff;
+    
+  }
+  td .actionbtndelete{
+    width: 80px;
+    height: 40px;
+    border-radius: 25px;
+    border:none;
+    font-size: 20px;
+    background-color: #cd2929;
+    color: #ffffff;
+  }
+  tr:hover td{
+    color:#ffffff;
+    cursor: pointer;
+    background-color: #8d8d8d;
+  }
+  .actionbtndelete:hover{
+    color:#ffffff;
+    cursor: pointer;
+    background-color: #ff5151;
+  }
+  .actionbtnedit:hover{
+    color:#ffffff;
+    cursor: pointer;
+    background-color: #36df85;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  @media screen and (max-width: 600px) {
+    table {
+      width: 100%;
+      top: 0;
+    }
+  }
