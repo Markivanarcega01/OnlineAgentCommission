@@ -1,87 +1,229 @@
 /*tables style------------------*/
-.agenttbl{
-    margin-left: 400px;
-    margin-top: 200px;
-    height: 700px;
-    width: 1450px;
-    background-color: #e2e2e2;
-    overflow: auto;
-  }
-  .agenttbl.agentdata{
-    border-collapse:collapse;
-    position: relative;
-    top: 120px;
-    left:120px;
-    margin: 0 auto;
-    width: 80%;
-    height: auto;
-    table-layout: fixed;
-    min-width: 1000px;
-  }
-  table{
+.agenttbl {
+  margin-left: 400px;
+  margin-top: 200px;
+  height: 700px;
+  width: 1450px;
+  background-color: #e2e2e2;
+  overflow: auto;
+}
+.agenttbl.agentdata {
+  border-collapse: collapse;
+  position: relative;
+  top: 120px;
+  left: 120px;
+  margin: 0 auto;
+  width: 80%;
+  height: auto;
+  table-layout: fixed;
+  min-width: 1000px;
+}
+table {
+  width: 100%;
+  table-layout: fixed;
+  min-width: 1000px;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding-top: 10px;
+  text-align: center;
+  padding: 8px;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 15px 25px;
+  word-break: break-all;
+  color: #1d1d1d;
+}
+
+th {
+  position: sticky;
+  background-color: #363636;
+  top: 0;
+  color: #ffffff;
+  font-size: 20px;
+}
+td .actionbtnedit {
+  width: 80px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  font-size: 20px;
+  background-color: #00b460;
+  color: #ffffff;
+}
+td .actionbtndelete {
+  width: 80px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  font-size: 20px;
+  background-color: #cd2929;
+  color: #ffffff;
+}
+tr:hover td {
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #8d8d8d;
+}
+.actionbtndelete:hover {
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #ff5151;
+}
+.actionbtnedit:hover {
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #36df85;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/*---------POPUP STyLE--------------------*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Raleway", sans-serif;
+}
+.center {
+  position: absolute;
+  top: 160px;
+  left: 1750px;
+  transform: translate(-50%, -50%);
+}
+I .center button {
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.center .popbtn {
+  border-radius: 100px;
+  background-color: #ce2222;
+  color: #f5f5f5;
+  font-size: 20px;
+  height: 30px;
+  width: 150px;
+  border: none;
+}
+.popup {
+  position: absolute;
+  margin-top: -100px;
+  margin-left: 55%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.25);
+  width: 500px;
+  padding: 20px 30px;
+  background: #fff;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 25px;
+  transition: top 0ms ease-in-out 200ms;
+}
+.popup.active {
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms,
+    transform 20ms ease-in-out 0ms;
+}
+.popup .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background: #1b1b1b;
+  color: #eee;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.popup .form h2 {
+  text-align: center;
+  color: #222;
+  margin: 10px 0px 20px;
+  font-size: 25px;
+}
+.popup .form .form-element {
+  margin: 15px 0px;
+}
+.popup .form .form-element label {
+  font-size: 18px;
+  color: #222;
+  margin-left: 10px;
+}
+
+.popup .form .form-element input[type="text"] {
+  margin-top: 5px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #4a4a4a;
+  border-radius: 50px;
+}
+.popup .form .form-element input[type="checkbox"] {
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+}
+.popup .form .form-element .checkboxlbl {
+  font-size: 17px;
+  margin-left: 10px;
+}
+.popup .form .form-element a {
+  display: block;
+  text-align: right;
+  font-size: 15px;
+  color: #1a79ca;
+  text-decoration: none;
+  font-weight: 600;
+}
+.form-element .donebtn {
+  width: 150px;
+  height: 40px;
+  border: 1px solid black;
+  outline: none;
+  font-size: 15px;
+  color: #f5f5f5;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-left: 43px;
+  background-color: rgb(45, 167, 94);
+}
+.form-element .donebtn:hover {
+  background-color: rgb(18, 220, 143);
+}
+.form-element .backbtn:hover {
+  background-color: rgb(255, 48, 48);
+}
+
+.form-element .backbtn {
+  width: 150px;
+  height: 40px;
+  border: 1px solid black;
+  outline: none;
+  font-size: 15px;
+  color: #f5f5f5;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-left: 43px;
+  background-color: rgb(179, 30, 30);
+}
+
+@media screen and (max-width: 600px) {
+  table {
     width: 100%;
-    table-layout: fixed;
-    min-width: 1000px;
-    border-collapse:collapse;
+    top: 0;
   }
-  th, td {
-    padding-top: 10px;
-    text-align: center;
-    padding: 8px;
-    border-bottom: 1px solid #d4d4d4;
-    padding: 15px 25px;
-    word-break: break-all;
-    color:#1d1d1d;
-  
-  }
-  
-  th {
-    position: sticky;
-    background-color: #363636;
-    top:0;
-    color: #ffffff;
-    font-size: 20px;
-  }
-  td .actionbtnedit{
-    width: 80px;
-    height: 40px;
-    border-radius: 25px;
-    border:none;
-    font-size: 20px;
-    background-color: #00b460;
-    color: #ffffff;
-    
-  }
-  td .actionbtndelete{
-    width: 80px;
-    height: 40px;
-    border-radius: 25px;
-    border:none;
-    font-size: 20px;
-    background-color: #cd2929;
-    color: #ffffff;
-  }
-  tr:hover td{
-    color:#ffffff;
-    cursor: pointer;
-    background-color: #8d8d8d;
-  }
-  .actionbtndelete:hover{
-    color:#ffffff;
-    cursor: pointer;
-    background-color: #ff5151;
-  }
-  .actionbtnedit:hover{
-    color:#ffffff;
-    cursor: pointer;
-    background-color: #36df85;
-  }
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  @media screen and (max-width: 600px) {
-    table {
-      width: 100%;
-      top: 0;
-    }
-  }
+}
