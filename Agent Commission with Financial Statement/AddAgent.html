@@ -67,8 +67,8 @@
             <th>ID</th>
             <th>NAME</th>
             <th>MOBILE NO.</th>
-            <th>POSITION</th>
             <th>ADDRESS</th>
+            <th>POSITION</th>
             <th>ACTION</th>
           </tr>
         </thead>
@@ -78,8 +78,8 @@
             <td>1</td>
             <td>Diether Aquino</td>
             <td>09296851031</td>
-            <td>Agent</td>
             <td>Biñan, Laguna</td>
+            <td>Agent</td>
             <td>
                 <button class="actionbtnedit">Edit</button>
                 <button class="actionbtndelete">Delete</button>
@@ -89,8 +89,8 @@
             <td>2</td>
             <td>Jayde Caritos</td>
             <td>09457814564</td>
-            <td>Broker</td>
             <td>Carmona, Cavite</td>
+            <td>Broker</td>
             <td>
                 <button class="actionbtnedit">Edit</button>
                 <button class="actionbtndelete">Delete</button>
@@ -100,8 +100,9 @@
             <td>3</td>
             <td>Paul Era</td>
             <td>09786854874</td>
-            <td>Agent</td>
             <td>Bacoor, Cavite</td>
+            <td>Agent</td>
+   
             <td>
                 <button class="actionbtnedit">Edit</button>
                 <button class="actionbtndelete">Delete</button>
@@ -111,21 +112,55 @@
             <td>4</td>
             <td>Post Malone</td>
             <td>09457814515</td>
-            <td>Agent</td>
             <td>Indang, Cavite</td>
+            <td>Agent</td>
             <td>
                 <button class="actionbtnedit">Edit</button>
                 <button class="actionbtndelete">Delete</button>
             </td>
           </tr>
-
         </tbody>
       </table>
     </div>
+    <div class="center">
+      <button class="popbtn" id="show-login">Add Agent  + </button>
+      </div>
+      <div class="popup">
+      <div class="close-btn">&times;</div>
+      <div class="form">
+      <h2>Add Agent</h2>
+      <div class="form-element">
+      <label>Name</label>
+      <input type="text" id="name" placeholder="Enter Name">
+      </div>
+      <div class="form-element">
+          <label>Mobile Number</label>
+          <input type="text" id="mobilenumber" placeholder="Enter Mobile Number">
+          </div>
+              <div class="form-element">
+                  <label>Address</label>
+                  <input type="text" id="address" placeholder="Enter Address">
+                  </div>
+      <div class="form-element">
+      <label for="">Position</label>
+      <br>
+      <br>
+      <input class ="cb" type="checkbox" id="agent">
+      <label class="checkboxlbl" for="">Agent</label>
+      <input class ="cb" type="checkbox" id="broker">
+      <label class="checkboxlbl" for="">Broker</label>
+      </div>
+      <div class="form-element">
+      <br>
+      <button class="backbtn">Back</button>
+      <button class="donebtn">Done</button>
+      </div>
+
        <!--JQUERY CDN LINK--> 
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"> </script>
         <!--Javascript Dropdown--> 
        <script src="index.js"></script>
+       <script src="popup.js"></script>
     
 </body>
 </html>
